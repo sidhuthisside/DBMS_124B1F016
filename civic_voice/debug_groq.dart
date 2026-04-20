@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 void main() async {
-  // Test the key found in list_models.dart
-  const apiKey = '***REMOVED***';
+  // Use a secure environment variable for API keys instead of hardcoding them.
+  const apiKey = String.fromEnvironment('GROQ_API_KEY', defaultValue: '***REMOVED***');
   
   print("Testing Backup API Key: ${apiKey.substring(0, 10)}...");
 

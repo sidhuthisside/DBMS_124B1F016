@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 void main() async {
-  const apiKey = '***REMOVED***'; 
+  const apiKey = String.fromEnvironment('GROQ_API_KEY', defaultValue: '***REMOVED***');
   final url = Uri.parse('https://api.groq.com/openai/v1/models');
 
   try {
